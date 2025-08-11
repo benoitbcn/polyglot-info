@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{title}</title>
+  <link rel="stylesheet" href="/style.css">
+  <meta name="description" content="{desc}">
+</head>
+<body>
+  <header>
+    <a href="/" class="small">← Back to home</a>
+    <h1>{title}</h1>
+    <p class="small">{date}</p>
+  </header>
+  <div class="container">
+    <div class="card">
+      <h3>Word of the Day</h3>
+      <p><strong>{w_en}</strong> -> <em>{w_fr}</em> (FR), <em>{w_es}</em> (ES)</p>
+    </div>
+    <div class="card">
+      <h3>Mini Lesson</h3>
+      <p>{lesson}</p>
+      <ul>
+        <li><strong>EN:</strong> {ex_en}</li>
+        <li><strong>FR:</strong> {ex_fr}</li>
+        <li><strong>ES:</strong> {ex_es}</li>
+      </ul>
+    </div>
+  </div>
+  <footer>&copy; Polyglot Info</footer>
+</body>
+</html>
