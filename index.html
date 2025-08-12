@@ -1,9 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>Polyglot Info</title>
   <link rel="stylesheet" href="/style.css?v=6">
+  <script>
+  (function () {
+    if (localStorage.getItem('langRedirectDone')) return;
+    const lang = (navigator.language || '').toLowerCase();
+    if (lang.startsWith('fr')) location.replace('/index-fr.html');
+    else if (lang.startsWith('es')) location.replace('/index-es.html');
+    localStorage.setItem('langRedirectDone', '1');
+  })();
+</script>
   <style>
     .gallery{max-width:1000px;margin:30px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
     .card{background:#1a1a1a;border-radius:12px;overflow:hidden;padding-bottom:10px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
