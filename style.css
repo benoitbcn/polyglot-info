@@ -44,5 +44,7 @@ main {
 
 .gallery img {
   width: 100%;
+  height: 160px;       /* Hauteur fixe */
+  object-fit: cover;   /* Recadre proprement */
   border-radius: 10px;
 }
