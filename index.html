@@ -4,6 +4,61 @@
 <meta charset="UTF-8">
 <title>Polyglot Info</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+  }
+  header, footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(180deg, #111, #222);
+  }
+  nav a {
+    color: #4db6ff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+  }
+  .intro {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .intro img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-top: 20px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .card img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  .card h3 {
+    margin-top: 10px;
+    color: #4db6ff;
+  }
+</style>
 </head>
 <body>
 <header>
@@ -16,10 +71,33 @@
 <a href="mailto:info@polyglot-info.org">Contact</a>
 </nav>
 </header>
+
 <main>
-<h2>Educational resources in multiple languages</h2>
-<p>Fresh micro-lessons and cultural snippets, updated regularly.</p>
+<section class="intro">
+  <h2>Educational Resources in Multiple Languages</h2>
+  <p>Learn languages and explore cultures through bite-sized lessons, insightful articles, and real-world examples.</p>
+  <img src="images/main-banner.jpg" alt="People learning languages together">
+</section>
+
+<section class="grid">
+  <div class="card">
+    <img src="images/travel.jpg" alt="Travel and culture">
+    <h3>Travel & Culture</h3>
+    <p>Discover the customs, traditions, and history behind the languages you learn.</p>
+  </div>
+  <div class="card">
+    <img src="images/learning.jpg" alt="Learning together">
+    <h3>Language Tips</h3>
+    <p>Quick, practical advice for mastering vocabulary, grammar, and pronunciation.</p>
+  </div>
+  <div class="card">
+    <img src="images/food.jpg" alt="World cuisine">
+    <h3>Food & Lifestyle</h3>
+    <p>Explore the culinary heritage and lifestyle habits that shape cultures worldwide.</p>
+  </div>
+</section>
 </main>
+
 <footer>
 <p>© Polyglot Info</p>
 </footer>
