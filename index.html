@@ -1,68 +1,54 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <link rel="stylesheet" href="/style.css?v=5">
-<style>
-  /* FORÇAGE IMMÉDIAT — redimensionne la galerie */
-  .gallery {
-    max-width: 1000px;
-    margin: 30px auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 22px;
-  }
-  .card {
-    background: #1a1a1a;
-    border-radius: 12px;
-    overflow: hidden;
-    padding-bottom: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,.25);
-  }
-  .card img {
-    width: 100%;
-    height: 180px;       /* hauteur fixe */
-    object-fit: cover;   /* recadre proprement */
-    display: block;
-    border-bottom: 1px solid rgba(255,255,255,.06);
-  }
-  .card h3 { margin: 12px 0 6px; }
-  .card p  { margin: 0 12px 10px; color:#cfd8dc; font-size: 14px; }
-</style>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Polyglot Info</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Polyglot Info</title>
+  <link rel="stylesheet" href="/style.css?v=6">
+  <style>
+    .gallery{max-width:1000px;margin:30px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+    .card{background:#1a1a1a;border-radius:12px;overflow:hidden;padding-bottom:10px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+    .card img{width:100%;height:180px;object-fit:cover;display:block;border-bottom:1px solid rgba(255,255,255,.06)}
+    .card h3{margin:12px 0 6px}
+    .card p{margin:0 12px 10px;color:#cfd8dc;font-size:14px}
+    .lang-switch a{color:#00aaff;margin:0 6px;text-decoration:none}
+  </style>
 </head>
 <body>
 <header>
   <h1>Polyglot Info</h1>
   <nav>
-    <a href="index.html">Accueil</a> |
-    <a href="about.html">À propos</a> |
-    <a href="archive.html">Archives</a> |
-    <a href="terms.html">Conditions</a> |
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="archive.html">Archive</a> |
+    <a href="terms.html">Terms</a> |
     <a href="mailto:info@polyglot-info.org">Contact</a>
   </nav>
+  <div class="lang-switch">Language:
+    <a href="index.html">EN</a> ·
+    <a href="index-fr.html">FR</a> ·
+    <a href="index-es.html">ES</a>
+  </div>
 </header>
 
 <main>
-  <h2>Ressources éducatives multilingues</h2>
-  <p>Des micro-leçons et des aperçus culturels, mis à jour régulièrement.</p>
+  <h2>Multilingual educational resources</h2>
+  <p>Short lessons and cultural insights, updated regularly.</p>
 
   <section class="gallery">
     <div class="card">
-      <img src="https://polyglot-info.org/images/photo1.jpg?v=3" alt="Cuisine">
-      <h3>Cuisine</h3>
-      <p>Recettes et traditions culinaires du monde.</p>
+      <img src="/images/photo1.jpg" alt="Food & Cuisine">
+      <h3>Food & Cuisine</h3>
+      <p>Recipes and culinary traditions from around the world.</p>
     </div>
     <div class="card">
-      <img src="https://polyglot-info.org/images/photo2.jpg?v=3" alt="Apprentissage">
-      <h3>Apprentissage</h3>
-      <p>Conseils et ressources pour apprendre de nouvelles langues.</p>
+      <img src="/images/photo2.jpg" alt="Learning">
+      <h3>Learning</h3>
+      <p>Tips and resources to learn new languages.</p>
     </div>
     <div class="card">
-      <img src="https://polyglot-info.org/images/photo3.jpg?v=3" alt="Voyage">
-      <h3>Voyage</h3>
-      <p>Découvertes culturelles et destinations fascinantes.</p>
+      <img src="/images/photo3.jpg" alt="Travel">
+      <h3>Travel</h3>
+      <p>Cultural discoveries and fascinating destinations.</p>
     </div>
   </section>
 </main>
