@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Polyglot Info — Inicio</title>
 
-  <!-- Favicons -->
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="/favicon.ico">
   <link rel="icon" sizes="32x32" href="/favicon-32.png">
@@ -13,29 +12,34 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180.png">
   <meta name="theme-color" content="#101418">
 
-  <link rel="stylesheet" href="/style.css?v=11">
+  <link rel="stylesheet" href="/style.css?v=12">
   <style>
-    header { display:flex; align-items:center; gap:14px; }
-    .brand { display:inline-flex; align-items:center; }
-    .logo { height:40px; width:auto; display:block; }
-    @media (max-width:520px){ .logo{ height:34px; } }
-    .gallery { max-width:1000px; margin:30px auto; display:grid;
-               grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; }
-    .card { background:#1a1a1a; border-radius:12px; overflow:hidden; padding-bottom:10px;
-            box-shadow:0 2px 10px rgba(0,0,0,.25); text-decoration:none; color:#e7f2ff; }
-    .card img { width:100%; height:180px; object-fit:cover; display:block;
-                border-bottom:1px solid rgba(255,255,255,.06); }
-    .card h3 { margin:12px 12px 6px; }
-    .card p  { margin:0 12px 10px; color:#cfd8dc; font-size:14px; }
-    .card:hover { transform:translateY(-2px); transition:.15s ease; }
+    header{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+    .brand{display:inline-flex;align-items:center}
+    .logo{height:40px;width:auto;display:block}
+    @media (max-width:520px){.logo{height:34px}}
+    .lang-switch{margin-left:auto;font-size:.95rem}
+    .lang-switch a{color:#00aaff;text-decoration:none;margin-left:10px}
+    .lang-switch a.active{font-weight:600;text-decoration:underline}
+    .gallery{max-width:1000px;margin:30px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+    .card{background:#1a1a1a;border-radius:12px;overflow:hidden;padding-bottom:10px;box-shadow:0 2px 10px rgba(0,0,0,.25);text-decoration:none;color:#e7f2ff}
+    .card img{width:100%;height:180px;object-fit:cover;display:block;border-bottom:1px solid rgba(255,255,255,.06)}
+    .card h3{margin:12px 12px 6px}
+    .card p{margin:0 12px 10px;color:#cfd8dc;font-size:14px}
+    .card:hover{transform:translateY(-2px);transition:.15s ease}
   </style>
 </head>
 <body>
 <header>
-  <a href="/index-es.html" class="brand">
-    <img src="/assets/logo.svg" alt="Polyglot Info" class="logo">
-  </a>
+  <a href="/index-es.html" class="brand"><img src="/assets/logo.svg" alt="Polyglot Info" class="logo"></a>
   <h1>Polyglot Info</h1>
+
+  <nav class="lang-switch" aria-label="Idioma">
+    <a href="/index.html">EN</a>
+    <a href="/index-fr.html" lang="fr">FR</a>
+    <a class="active" href="/index-es.html" lang="es">ES</a>
+  </nav>
+
   <nav>
     <a href="/index-es.html">Inicio</a> |
     <a href="/about-es.html">Acerca de</a> |
@@ -68,8 +72,6 @@
   </section>
 </main>
 
-<footer>
-  <p>© Polyglot Info</p>
-</footer>
+<footer><p>© Polyglot Info</p></footer>
 </body>
 </html>
