@@ -24,12 +24,21 @@
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 22px;
     }
+    /* .card est maintenant un <a> bloc cliquable */
     .card {
+      display: block;
       background: #1a1a1a;
       border-radius: 12px;
       overflow: hidden;
       padding-bottom: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,.25);
+      color: inherit;              /* pas de bleu/violet de lien */
+      text-decoration: none;       /* pas de soulignement */
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,.35);
     }
     .card img {
       width: 100%;
@@ -38,7 +47,7 @@
       display: block;
       border-bottom: 1px solid rgba(255,255,255,.06);
     }
-    .card h3 { margin: 12px 0 6px; }
+    .card h3 { margin: 12px 12px 6px; }   /* marges internes symétriques */
     .card p  { margin: 0 12px 8px; color:#cfd8dc; font-size: 14px; }
     .lang-switch {
       margin-top: 8px;
@@ -78,21 +87,23 @@
   <p>Short lessons and cultural insights, updated regularly.</p>
 
   <section class="gallery">
-    <div class="card">
+    <a class="card" href="food.html">
       <img src="images/photo1.jpg" alt="Cuisine">
       <h3>Food & Cuisine</h3>
       <p>Recipes and culinary traditions from around the world.</p>
-    </div>
-    <div class="card">
+    </a>
+
+    <a class="card" href="learning.html">
       <img src="images/photo2.jpg" alt="Learning">
       <h3>Learning</h3>
       <p>Tips and resources to learn new languages.</p>
-    </div>
-    <div class="card">
+    </a>
+
+    <a class="card" href="travel.html">
       <img src="images/photo3.jpg" alt="Travel">
       <h3>Travel</h3>
       <p>Cultural discoveries and fascinating destinations.</p>
-    </div>
+    </a>
   </section>
 </main>
 
