@@ -2,82 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Polyglot Info</title>
-  <link rel="stylesheet" href="/style.css?v=8">
-
-  <!-- Script de redirection automatique selon la langue -->
-  <script>
-    (function () {
-      if (localStorage.getItem('langRedirectDone')) return;
-      const lang = (navigator.language || '').toLowerCase();
-      if (lang.startsWith('fr')) location.replace('/index-fr.html');
-      else if (lang.startsWith('es')) location.replace('/index-es.html');
-      localStorage.setItem('langRedirectDone', '1');
-    })();
-  </script>
-
+  <link rel="stylesheet" href="/style.css?v=11">
   <style>
-    .gallery {
-      max-width: 1000px;
-      margin: 30px auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-    }
-    /* .card est maintenant un <a> bloc cliquable */
-    .card {
-      display: block;
-      background: #1a1a1a;
-      border-radius: 12px;
-      overflow: hidden;
-      padding-bottom: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,.25);
-      color: inherit;              /* pas de bleu/violet de lien */
-      text-decoration: none;       /* pas de soulignement */
-      transition: transform .15s ease, box-shadow .15s ease;
-    }
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0,0,0,.35);
-    }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      display: block;
-      border-bottom: 1px solid rgba(255,255,255,.06);
-    }
-    .card h3 { margin: 12px 12px 6px; }   /* marges internes symétriques */
-    .card p  { margin: 0 12px 8px; color:#cfd8dc; font-size: 14px; }
-    .lang-switch {
-      margin-top: 8px;
-    }
-    .lang-switch a {
-      color: #00aaff;
-      text-decoration: none;
-      margin: 0 5px;
-    }
-    .lang-switch a:hover {
-      text-decoration: underline;
-    }
+    header { display:flex; align-items:center; gap:14px; }
+    .brand { display:inline-flex; align-items:center; }
+    .logo { height:40px; width:auto; display:block; }
+    @media (max-width:520px){ .logo{ height:34px; } }
+
+    /* clickable cards */
+    .gallery { max-width:1000px; margin:30px auto; display:grid;
+               grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; }
+    .card { background:#1a1a1a; border-radius:12px; overflow:hidden; padding-bottom:10px;
+            box-shadow:0 2px 10px rgba(0,0,0,.25); text-decoration:none; color:#e7f2ff; }
+    .card img { width:100%; height:180px; object-fit:cover; display:block;
+                border-bottom:1px solid rgba(255,255,255,.06); }
+    .card h3 { margin:12px 12px 6px; }
+    .card p  { margin:0 12px 10px; color:#cfd8dc; font-size:14px; }
+    .card:hover { transform:translateY(-2px); transition:.15s ease; }
   </style>
 </head>
 <body>
+
 <header>
+  <a href="/index.html" class="brand">
+    <img src="/assets/logo.svg" alt="Polyglot Info" class="logo">
+  </a>
   <h1>Polyglot Info</h1>
-
-  <!-- Liens de changement de langue -->
-  <div class="lang-switch">
-    <a href="index.html">EN</a> | 
-    <a href="index-fr.html">FR</a> | 
-    <a href="index-es.html">ES</a>
-  </div>
-
   <nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="archive.html">Archive</a> |
-    <a href="terms.html">Terms</a> |
+    <a href="/index.html">Home</a> |
+    <a href="/about.html">About</a> |
+    <a href="/archive.html">Archive</a> |
+    <a href="/terms.html">Terms</a> |
     <a href="mailto:info@polyglot-info.org">Contact</a>
   </nav>
 </header>
@@ -87,20 +44,18 @@
   <p>Short lessons and cultural insights, updated regularly.</p>
 
   <section class="gallery">
-    <a class="card" href="food.html">
-      <img src="images/photo1.jpg" alt="Cuisine">
-      <h3>Food & Cuisine</h3>
+    <a class="card" href="/archive.html#food">
+      <img src="/images/photo1.jpg" alt="Food & Cuisine">
+      <h3>Food &amp; Cuisine</h3>
       <p>Recipes and culinary traditions from around the world.</p>
     </a>
-
-    <a class="card" href="learning.html">
-      <img src="images/photo2.jpg" alt="Learning">
+    <a class="card" href="/archive.html#learning">
+      <img src="/images/photo2.jpg" alt="Learning">
       <h3>Learning</h3>
       <p>Tips and resources to learn new languages.</p>
     </a>
-
-    <a class="card" href="travel.html">
-      <img src="images/photo3.jpg" alt="Travel">
+    <a class="card" href="/archive.html#travel">
+      <img src="/images/photo3.jpg" alt="Travel">
       <h3>Travel</h3>
       <p>Cultural discoveries and fascinating destinations.</p>
     </a>
@@ -110,5 +65,6 @@
 <footer>
   <p>© Polyglot Info</p>
 </footer>
+
 </body>
 </html>
