@@ -3,28 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Polyglot Info</title>
+  <title>Polyglot Info — Accueil</title>
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="icon" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180.png">
+  <meta name="theme-color" content="#101418">
+
   <link rel="stylesheet" href="/style.css?v=11">
   <style>
     header { display:flex; align-items:center; gap:14px; }
     .brand { display:inline-flex; align-items:center; }
     .logo { height:40px; width:auto; display:block; }
     @media (max-width:520px){ .logo{ height:34px; } }
-
-    /* Rendre les cartes cliquables (si tu pointes vers des pages plus tard) */
-    .gallery { max-width: 1000px; margin: 30px auto; display: grid;
-               grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }
+    .gallery { max-width:1000px; margin:30px auto; display:grid;
+               grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; }
     .card { background:#1a1a1a; border-radius:12px; overflow:hidden; padding-bottom:10px;
             box-shadow:0 2px 10px rgba(0,0,0,.25); text-decoration:none; color:#e7f2ff; }
     .card img { width:100%; height:180px; object-fit:cover; display:block;
                 border-bottom:1px solid rgba(255,255,255,.06); }
     .card h3 { margin:12px 12px 6px; }
     .card p  { margin:0 12px 10px; color:#cfd8dc; font-size:14px; }
-    .card:hover { transform: translateY(-2px); transition: .15s ease; }
+    .card:hover { transform:translateY(-2px); transition:.15s ease; }
   </style>
 </head>
 <body>
-
 <header>
   <a href="/index-fr.html" class="brand">
     <img src="/assets/logo.svg" alt="Polyglot Info" class="logo">
@@ -44,17 +50,17 @@
   <p>Des micro-leçons et des aperçus culturels, mis à jour régulièrement.</p>
 
   <section class="gallery">
-    <a class="card" href="/archive-fr.html#cuisine">
+    <a class="card" href="/archive-fr.html#food">
       <img src="/images/photo1.jpg" alt="Cuisine">
       <h3>Cuisine</h3>
       <p>Recettes et traditions culinaires du monde.</p>
     </a>
-    <a class="card" href="/archive-fr.html#apprentissage">
+    <a class="card" href="/archive-fr.html#learning">
       <img src="/images/photo2.jpg" alt="Apprentissage">
       <h3>Apprentissage</h3>
       <p>Conseils et ressources pour apprendre de nouvelles langues.</p>
     </a>
-    <a class="card" href="/archive-fr.html#voyage">
+    <a class="card" href="/archive-fr.html#travel">
       <img src="/images/photo3.jpg" alt="Voyage">
       <h3>Voyage</h3>
       <p>Découvertes culturelles et destinations fascinantes.</p>
@@ -65,6 +71,5 @@
 <footer>
   <p>© Polyglot Info</p>
 </footer>
-
 </body>
 </html>
