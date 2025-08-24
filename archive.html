@@ -1,19 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Articles Archive - Polyglot Info</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Articles Archive</title>
+  <link rel="stylesheet" href="/style.css?v=11">
+  <style>
+    .archive-wrap{max-width:860px;margin:32px auto;}
+    .archive-list{list-style:none;margin:0;padding:0;}
+    .archive-list li{margin:10px 0;}
+    .archive-list a{
+      display:block; padding:12px 16px; 
+      background:#121416; border:1px solid rgba(255,255,255,.06);
+      border-radius:10px; text-decoration:none; color:#e7f2ff;
+      transition:.15s transform ease, .15s border-color ease;
+    }
+    .archive-list a:hover{ transform:translateY(-2px); border-color:rgba(66,217,255,.5); }
+    .archive-list small{color:#9fb3c1;}
+  </style>
 </head>
 <body>
-<header><h1>Articles Archive</h1></header>
-<main>
-<ul>
-<li>How to Learn Languages Fast</li>
-<li>10 Cultural Facts About Japan</li>
-<li>The Rise of Multilingual Education</li>
-</ul>
+<header>
+  <a href="/index.html" class="brand"><img src="/assets/logo.svg" alt="Polyglot Info" class="logo"></a>
+  <h1>Articles Archive</h1>
+  <nav>
+    <a href="/index.html">Home</a> |
+    <a href="/about.html">About</a> |
+    <a href="/terms.html">Terms</a>
+  </nav>
+</header>
+
+<main class="archive-wrap">
+  <ul class="archive-list">
+    <li><a href="/articles/how-to-learn-languages-fast.html">
+      How to Learn Languages Fast <small>— tips & framework</small>
+    </a></li>
+
+    <li><a href="/articles/10-cultural-facts-about-japan.html">
+      10 Cultural Facts About Japan <small>— quick primer</small>
+    </a></li>
+
+    <li><a href="/articles/rise-of-multilingual-education.html">
+      The Rise of Multilingual Education <small>— global trends</small>
+    </a></li>
+  </ul>
 </main>
-<footer><p>© Polyglot Info</p></footer>
+
+<footer>
+  <p>© Polyglot Info</p>
+</footer>
 </body>
 </html>
